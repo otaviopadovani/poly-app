@@ -1,10 +1,14 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../poly-app-category/poly-app-category.html">
+<link rel="import" href="../poly-app-categories/poly-app-categories.html">
 
 <polymer-element name="poly-main" attributes="">
   <template>
     <link rel="stylesheet" href="poly-main.css">
     <core-animated-pages>
+      <poly-app-categories></poly-app-categories>
+      <poly-app-category></poly-app-category>
     </core-animated-pages>
   </template>
   <script>

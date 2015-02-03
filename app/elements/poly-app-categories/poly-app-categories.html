@@ -1,0 +1,35 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="../../bower_components/core-selector/core-selector.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<polymer-element name="poly-app-categories" attributes="">
+  <template>
+    <link rel="stylesheet" href="poly-app-categories.css">
+    
+    <core-toolbar>
+      <paper-icon-button icon="menu"></paper-icon-button>
+    </core-toolbar>
+
+    <template repeat="{{item in items}}">
+      <article style="background:{{item.color}}">
+        <h2>{{item.application}}</h2>
+      </article>
+    </template>
+
+  </template>
+  <script>
+    (function () {
+      Polymer({
+        ready: function () {
+          this.items = [
+            { application: 'Thumbnail Editor', color: '#f4db33' },
+            { application: 'Collab', color: '#972ff8' },
+            { application: 'Analytics', color: '#7dd6fe' },
+            { application: 'Dashboard', color: '#dc3c84' }
+          ];
+        }
+      });
+    })();
+  </script>
+</polymer-element>
